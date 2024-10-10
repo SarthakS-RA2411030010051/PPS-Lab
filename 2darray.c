@@ -26,7 +26,7 @@ int main() {
     }
     
 printf("\n");
-
+/*
 // Multiplication of Arrays
     for (int i = 0; i < 2; i++) {
         for (int j = 0; j < 2; j++) {
@@ -37,5 +37,26 @@ printf("\n");
     }
     printf("\n");
     }
+*/
+
+    //Using Pointers and Array
+    int *ptr1, *ptr2, *ptr3;
+    for (int i = 0; i < 2; i++) {
+        
+        for (int j = 0; j < 2; j++) {
+            for (int k = 0; k < 2; k++) {
+                //c[i][j]+=A[i][k]*B[k][j];
+                
+                ptr1= &A[i][k];
+                ptr2= &B[k][j];
+                ptr3= &c[i][j];
+                (*ptr3)+=(*ptr1)*(*ptr2);
+        }
+        printf("C[%d][%d]: %d    ", i, j, *ptr3);
+    }
+    printf("\n");
+    }
+
+
     return 0;
 }
