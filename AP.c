@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(){
-    int a1,a2,a3,n,d;
+    int a1,a2,a3,d;
     
     printf("Enter first term: ");
     scanf("%d", &a1);
