@@ -1,20 +1,30 @@
 #include <stdio.h>
+int check_armstrong(int);
 
 int main()
 {
-    float num1, num2;
-    double resnum1, resnum2;
 
-    scanf("%f", &num1);
-    scanf("%f", &num2);
+    int start, end, i;
+    scanf("%d %d", &start, &end);
 
-    if (num1 >= 101.00 || num2 >= 101.00)
+    if (start <= 0 || start >= 50 || end <= 0 || end >= 1000)
     {
-        resnum1 = (double)num1;
-        printf("%.2lf", resnum1);
-
-        resnum2 = (double)num2;
-        printf("%.2lf", resnum2);
+        printf("Invalid Output");
     }
+    else
+    {
+        for (i = start; i <= end; i++)
+        {
+            check_armstrong(i);
+        }
+    }
+
+    return 0;
+}
+
+int check_armstrong(int n)
+{
+    printf("%d ", n);
+
     return 0;
 }
