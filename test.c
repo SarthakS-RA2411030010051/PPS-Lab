@@ -1,15 +1,21 @@
-// C program to illustrate
-// power function
-#include <math.h>
+// C program to illustrate strings
+
 #include <stdio.h>
+#include <string.h>
 
 int main()
 {
-    double x = 6.1, y = 4.8;
+    // declare and initialize string
+    char str[] = "Geeks";
 
-    // Storing the answer in result.
-    double result = pow(x, y);
-    printf("%.2lf", result);
+    // print string
+    printf("%s\n", str);
+
+    int length = 0;
+    length = strlen(str);
+
+    // displaying the length of string
+    printf("Length of string str is %d", length);
 
     return 0;
 }
